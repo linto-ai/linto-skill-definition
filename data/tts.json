@@ -1,0 +1,18 @@
+{
+  "en-US": {
+    "say": {
+      "start": "The definition of ",
+      "middle": " is ",
+      "error_unknown_word": "Unknown word ",
+      "error_entities_number": "I require an entitie object to give a definition"
+    }
+  },
+  "fr-FR": {
+    "say": {
+      "start": "La définition de ",
+      "middle": " ai ",
+      "error_unknown_word": "Impossible de trouver une définition pour le mot ",
+      "error_entities_number": "J'ai besoin d'une entité objet pour fournir une définition"
+    }
+  }
+}
