@@ -1,6 +1,6 @@
 {
   "name": "@linto-ai/node-red-linto-definition",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Linto skill that give a definition of a given word",
   "author": "yhoupert@linagora.com",
   "license": "AGPL-3.0-or-later",
