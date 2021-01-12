@@ -9,12 +9,17 @@ module.exports = async function (msg) {
     return { say: tts.say.error_entities_number }
   }
 
-  let word = this.payloadAction.extractEntityFromName(msg.payload, itemWords).value
+  let word = this.payloadAction.extractEntityFromName(msg.payload, itemWords)
   if (!word) {
     return { say: tts.say.error_unknown_word }
   }
 
-  let result = await this.controller[this.config.api](word)
-  
-  return { say: `${tts.say.start} ${result.word} ${tts.say.middle} ${result.definition}`}
+  let result = await this.controller[this.config.api](word.value)
+
+  return {
+    say: {
+      phonetic: `${tts.say.start.phonetic} ${result.word} ${tts.say.middle.phonetic} ${result.definition}`,
+      text: `${tts.say.start.text} ${result.word} ${tts.say.middle.text} ${result.definition}`
+    }
+  }
 }
